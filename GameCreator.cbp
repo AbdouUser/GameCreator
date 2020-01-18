@@ -37,14 +37,24 @@
 		<Unit filename="include/Board.h" />
 		<Unit filename="include/BoardItem.h" />
 		<Unit filename="include/BoardsList.h" />
+		<Unit filename="include/Diams.h" />
+		<Unit filename="include/GameAdapter.h" />
+		<Unit filename="include/GamePlayer.h" />
 		<Unit filename="include/Oueurj.h" />
 		<Unit filename="include/Pawn.h" />
+		<Unit filename="include/Reumus.h" />
+		<Unit filename="include/Streumons.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Board.cpp" />
 		<Unit filename="src/BoardItem.cpp" />
 		<Unit filename="src/BoardsList.cpp" />
+		<Unit filename="src/Diams.cpp" />
+		<Unit filename="src/GameAdapter.cpp" />
+		<Unit filename="src/GamePlayer.cpp" />
 		<Unit filename="src/Oueurj.cpp" />
 		<Unit filename="src/Pawn.cpp" />
+		<Unit filename="src/Reumus.cpp" />
+		<Unit filename="src/Streumons.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

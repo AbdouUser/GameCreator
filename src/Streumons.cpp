@@ -2,7 +2,7 @@
 
 Streumons::Streumons(int x,int y): Pawn(pos_x,pos_y)
 {
-    //ctor
+    id='S';
 }
 
 Streumons::~Streumons()
@@ -19,3 +19,4 @@ bool Streumons::moveAuthorisation(int offset_x,int offset_y){
         return false;
     return true;
 }
+

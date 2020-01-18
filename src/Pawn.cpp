@@ -40,3 +40,11 @@ int Pawn::moveto(int offset_x,int offset_y) {
 bool Pawn::moveAuthorisation(int offset_x,int offset_y){
 return false;
 }
+char Pawn::getType() const {
+    return this->id;
+}
+
+ostream &operator<<(ostream &o,const Pawn &j){
+    o<<j.getType();
+    return o;
+}

@@ -1,28 +1,29 @@
 #include "Board.h"
 #include <iostream>
 #include <fstream>
-#include <string.h>
+#include <string>
 
 Board::Board()
 {
     //ctor
 }
-Board::Board(const char *path){
-ifstream file(path);
+Board::Board(const string path){
+ifstream file(path.c_str());
     if(file)
     {
         int COLUMNS,ROWS,LEVEL;
-        char* word;
+        string word;
         while(!file.eof())
         {
             file>>word;
+            cout << word << endl;
             if(word=="COLUMNS:"){
                 file>>COLUMNS;
                 this->columns=COLUMNS;
              }
             if(word=="ROWS:"){
                 file>>ROWS;
-                this->columns=ROWS;
+                this->rows=ROWS;
             }
             if(word=="LEVEL:"){
                 file>>LEVEL;
@@ -35,9 +36,10 @@ ifstream file(path);
                     for(int i=0;i<this->columns;i++)
                     {
                         board[i] =new Pawn[columns];
-                        memset(board[i],' ', columns*sizeof(char));
+                        //wmemset(board[i],' ', columns*sizeof(char));
                     }
                 }
+
                 for(int i=0;i<rows;i++)
                     for(int j=0;j<columns;j++){
                     char pawn;
@@ -55,9 +57,10 @@ ifstream file(path);
                     case '$':
                         this->board[i][j]=Diams(i,j);
                         break;
+                    case '-':
+                        this->board[i][j]=Pawn();
 
                     }
-
                 }
                 break;
             }
@@ -102,10 +105,15 @@ ostream &operator<<(ostream &o,const Board &b) {
  {
     for (int c = 0; c < b.getColumns(); ++c)
     {
-        cout << " ";
+        Pawn *pawn=&b.board[r][c];
+        if(pawn!=NULL)
+            o<<b.board[r][c];
+        else
+            o<<" ";
+
     }
-    cout << endl;
+    o<<endl;
  }
- return o<<"";
+ return o<<endl;
 }
 

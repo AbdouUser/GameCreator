@@ -2,7 +2,7 @@
 
 Reumus::Reumus(int x,int y): Pawn(pos_x,pos_y)
 {
-    //ctor
+    id='X';
 }
 
 Reumus::~Reumus()

@@ -12,7 +12,7 @@ class Board
 {
     public:
         Board();
-        Board(const char* path);
+        Board(const string path);
         virtual ~Board();
         Board(const Board& other);
         int getLevel()const;

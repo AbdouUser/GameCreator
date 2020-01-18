@@ -3,7 +3,8 @@ ROWS: 5
 LEVEL: 1
 PAWN:
 xxxxxxxxxx
-x        x
-x   J    x
-x      s x
+x--------x
+x---j----x
+x------s-x
 xxxxxxxxxx
+
